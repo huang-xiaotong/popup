@@ -1,0 +1,12 @@
+<template name = 'popup'>
+  <view class='temBg' style='display:{{popupDis}};'>
+    <view class='temCon' animation="{{temConAni}}" style='width:{{popupWidth}};height:{{popupHeight}};background:{{popupBg}};'>
+      <image class='temImg' wx:if="{{showImg}}" mode='widthFix' src='{{popupImg}}'></image>
+      <view class='content' wx:if="{{conText != ''}}"> <text>{{conText}}</text> </view>
+      <view class='btnsBox' wx:if="{{showBtn}}">
+        <view wx:if="{{leftBtn != ''}}" catchtap='popupLeft' class='btn'>{{leftBtn}}</view>
+        <view wx:if="{{rightBtn != ''}}" catchtap='popupRight' class='btn'>{{rightBtn}}</view>
+      </view>
+    </view>
+  </view>
+</template>

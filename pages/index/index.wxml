@@ -1,0 +1,5 @@
+<!--pages/modal/index.wxml-->
+<import src="../template/index.wxml"/>
+<view catchtap='openModal'>大弹窗</view>
+<view catchtap='openModal2'>小弹窗</view>
+<template is="popup" data="{{popupDis,showImg,popupImg,conText,showBtn,leftBtn,rightBtn,popupWidth,popupHeight,popupBg,temConAni}}"></template>
