@@ -37,33 +37,33 @@ class Popup {
       })
     },200)
   }
-}
-Popup.prototype.popupLeft = function () {
-  this.page.ani.scaleX(0).step();
-  this.page.setData({
-    temConAni: this.page.ani.export()
-  })
-  setTimeout(() => {
+  popupLeft(){
+    this.page.ani.scaleX(0).step();
     this.page.setData({
-      popupDis: 'none'
+      temConAni: this.page.ani.export()
     })
-  }, 200)
-  if (this.popupLeft) {
-    this.popupLeft();
+    setTimeout(() => {
+      this.page.setData({
+        popupDis: 'none'
+      })
+    }, 200)
+    if (this.popupLeft) {
+      this.popupLeft();
+    }
   }
-}
-Popup.prototype.popupRight = function(){
-  this.page.ani.scaleX(0).step();
-  this.page.setData({
-    temConAni: this.page.ani.export()
-  })
-  setTimeout(() => {
+  popupRight(){
+    this.page.ani.scaleX(0).step();
     this.page.setData({
-      popupDis: 'none'
+      temConAni: this.page.ani.export()
     })
-  }, 200)
-  if (this.popupRight) {
-    this.popupRight();
+    setTimeout(() => {
+      this.page.setData({
+        popupDis: 'none'
+      })
+    }, 200)
+    if (this.popupRight) {
+      this.popupRight();
+    }
   }
 }
 module.exports = {
